@@ -5,13 +5,13 @@ from jose import jwe
 from jose.exceptions import JOSEError
 import logging
 
-CLIENT_PASSCODE = "Basiwewe12"
-CLIENT_CERT_KEY = "7891fc392b7c34a4544af75cee67b44fb576c22e2fbb7cd7f5a96413daf44eb9"
+CLIENT_PASSCODE = "REPLACE WITH THE DECRYPTION KEY PASSCODE YOU CREATE WHILE CREATING THE DECRYPTION CERTIFICATE"
+CLIENT_CERT_KEY = "REPLACE WITH CERTIFICATE KEY"
 
 class EncryptionUtils:
     def __init__(self):
-        self.cert_file_path = "MastercardSendCrossBorderClientEnc1706757724.pem"
-        self.pkcs12_file_path = "decrypt-key-mastercard-encryption-key.p12"
+        self.cert_file_path = "REPLACE WITH ENCRYPTION CERTICATE KEY"
+        self.pkcs12_file_path = "REPLACE WITH THE DECRYPTION CERTIFICATE YOU CREATED"
 
     def _read_pub_key_from_cert(self):
         with open(self.cert_file_path, "rb") as certificate:
